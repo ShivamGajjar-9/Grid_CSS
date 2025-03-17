@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap");
+
+:root {
+  /* Primary Colors */
+  --primary-orange: hsl(26, 100%, 55%);
+  --primary-pale-orange: hsl(25, 100%, 94%);
+
+  /* Neutral Colors */
+  --neutral-very-dark-blue: hsl(220, 13%, 13%);
+  --neutral-dark-grayish-blue: hsl(219, 9%, 45%);
+  --neutral-grayish-blue: hsl(220, 14%, 75%);
+  --neutral-light-grayish-blue: hsl(223, 64%, 98%);
+  --neutral-white: hsl(0, 0%, 100%);
+  --neutral-black-transparent: hsla(0, 0%, 0%, 0.75); /* 75% opacity */
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Kumbh Sans", sans-serif; /* Ensure fallback */
+}
+
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+  background-color: var(
+    --neutral-light-grayish-blue
+  ); /* Use predefined variable */
+}
+
+.img {
+  grid-template-rows: auto 1fr;
+  margin: 10px;
+}
+
+.main-image {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  margin: 10px;
+}
+
+.images img {
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.images img:hover {
+  border: 2px solid var(--primary-orange);
+}
+
+.content {
+  display: grid;
+  gap: 5px;
+  padding: 15px;
+}
+
+p {
+  line-clamp: 3;
+  opacity: 0.5;
+}
+h1 {
+  font-size: clamp(1.8rem, 5vw, 2.5rem); /* Responsive font size */
+}
+h4 {
+  opacity: 0.5;
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+}
+.price {
+  align-items: center;
+  margin: 10px;
+}
+
+.price span {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.discount {
+  background: black;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.cart {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  margin: 10px;
+}
+
+.qnty {
+  display: flex;
+  align-items: center;
+  border: 1px solid gray;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.qnty button {
+  background: none;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.qnty span {
+  padding: 10px;
+  min-width: 30px;
+  text-align: center;
+}
+
+.add-cart {
+  background: var(--primary-orange);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

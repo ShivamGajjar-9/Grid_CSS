@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <title>Tip calculator app</title>
+
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+<div class="Wrapper">
+  <img src="images/logo.svg" alt="logo">
+  <div class="container">
+    <div class="left">
+      <div>
+        <label>Bill</label>
+        <input type="number" class="tip" placeholder="$" />
+        </div>
+      <div>
+        <label for="tip">Select Tip %</label>
+        <div class="tip-buttons">
+          <button class="tip-button">5%</button>
+          <button class="tip-button">10%</button>
+          <button class="tip-button">15%</button>
+          <button class="tip-button">25%</button>
+          <button class="tip-button">50%</button>
+          <input type="number" id="custom-tip" placeholder="Custom"  class="custom-tip"/>
+        </div>
+      </div>
+      <div>
+        <label for="people">Number of People</label>
+        <input type="number" class="people" placeholder="0" />
+      </div>
+    </div>
+    <div class="right">
+      <div class="contribution">
+        <p style="color: rgb(172, 179, 185);">Tip Amount / person</p>
+        <h2 id="tip-amount">$0.00</h2>
+      </div>
+      <div class="contribution">
+        <p style="color: rgb(172, 179, 185);">Total / person</p>
+        <h2 id="total-amount">$0.00</h2>
+      </div>
+        <div  class="contribution">
+          <button id="reset">RESET</button>
+        </div>
+      
+    </div>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Shivam Gajjar</a>.
+  </div>
+</body>
+</html>
